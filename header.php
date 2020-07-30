@@ -29,15 +29,15 @@
 			<div class="wrapper cap clear-bottom">
 				<?php 
 				$facebook_link = get_field("facebook_link","option");
-				$instagram_link = get_field("instagram_link","option");
+				$twitter_link = get_field("twitter_link","option");
 				if($facebook_link):?>
 					<div class="social">
 						<a href="<?php echo $facebook_link;?>" target="_blank"><i class="fa fa-facebook"></i></a>
 					</div><!--.social-->
 				<?php endif;
-				if($instagram_link):?>
+				if($twitter_link):?>
 					<div class="social">
-						<a href="<?php echo $instagram_link;?>" target="_blank"><i class="fa fa-instagram"></i></a>
+						<a href="<?php echo $twitter_link;?>" target="_blank"><i class="fa fa-twitter"></i></a>
 					</div><!--.social-->
 				<?php endif;?>
 			</div><!--.wrapper-->
