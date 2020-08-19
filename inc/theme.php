@@ -13,13 +13,13 @@
 function my_login_logo() { ?>
 <style type="text/css">
   body.login div#login h1 a {
-  	background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png);
-  	background-size: 300px 100px;
+  	background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/login-logo.png);
+  	background-size: 300px 300px;
   	width: 300px;
-  	height: 100px;
+  	height: 300px;
   }
   body.login {
-    background-color: #0054A6;
+    background-color: #fff;
   }
 </style>
 <?php }

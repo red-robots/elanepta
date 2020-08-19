@@ -299,13 +299,17 @@ html[xmlns] .flexslider .slides{display:block}
 #masthead>.row-2>.wrapper.cap button.menu-toggle.active{color:white;border:2px solid white;background-color:black}
 #masthead>.row-2>.wrapper.cap nav.left-nav{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}
 #masthead>.row-2>.wrapper.cap nav.right-nav{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4}
-#masthead>.row-2>.wrapper.cap nav.left-nav,#masthead>.row-2>.wrapper.cap nav.right-nav{display:none}
+#masthead>.row-2>.wrapper.cap nav.left-nav,#masthead>.row-2>.wrapper.cap nav.right-nav{display:none;z-index:100000}
 #masthead>.row-2>.wrapper.cap nav.left-nav.active,#masthead>.row-2>.wrapper.cap nav.right-nav.active{display:block}
 #masthead>.row-2>.wrapper.cap nav.left-nav>div ul,#masthead>.row-2>.wrapper.cap nav.right-nav>div ul{margin:0;padding:0;text-align:center}
-#masthead>.row-2>.wrapper.cap nav.left-nav>div ul li,#masthead>.row-2>.wrapper.cap nav.right-nav>div ul li{list-style-type:none}
+#masthead>.row-2>.wrapper.cap nav.left-nav>div ul li,#masthead>.row-2>.wrapper.cap nav.right-nav>div ul li{list-style-type:none;width:auto;position:relative}
 #masthead>.row-2>.wrapper.cap nav.left-nav>div ul li:first-child,#masthead>.row-2>.wrapper.cap nav.right-nav>div ul li:first-child{margin-left:0}
 #masthead>.row-2>.wrapper.cap nav.left-nav>div ul li:last-child,#masthead>.row-2>.wrapper.cap nav.right-nav>div ul li:last-child{margin-right:0}
 #masthead>.row-2>.wrapper.cap nav.left-nav>div ul li a,#masthead>.row-2>.wrapper.cap nav.right-nav>div ul li a{text-decoration:none;text-transform:uppercase;color:white;font-size:16px}
+#masthead>.row-2>.wrapper.cap nav.left-nav>div ul li:hover ul,#masthead>.row-2>.wrapper.cap nav.right-nav>div ul li:hover ul{display:block;position:absolute;top:100%;left:0;width:230px;background-color:#673695}
+#masthead>.row-2>.wrapper.cap nav.left-nav>div ul li:hover ul li,#masthead>.row-2>.wrapper.cap nav.right-nav>div ul li:hover ul li{background-color:rgba(255,255,255,0.2);width:100%;text-align:left;font-size:12px}
+#masthead>.row-2>.wrapper.cap nav.left-nav>div ul li:hover ul li a,#masthead>.row-2>.wrapper.cap nav.right-nav>div ul li:hover ul li a{padding:10px;display:block;font-size:12px}
+#masthead>.row-2>.wrapper.cap nav.left-nav>div ul li:hover ul li:hover,#masthead>.row-2>.wrapper.cap nav.right-nav>div ul li:hover ul li:hover{background-color:rgba(255,255,255,0.35)}
 #masthead>.row-2>.wrapper.cap .logo{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1;margin:0 auto;width:80%}
 #masthead>.row-2>.wrapper.cap .logo a{display:block;-webkit-transform:translateX(0) translateY(-50px);transform:translateX(0) translateY(-50px)}
 #masthead>.row-2>.wrapper.cap .logo a img{display:block;width:100%}
@@ -413,6 +417,7 @@ embed,iframe,object{max-width:100%}
 #masthead>.row-2>.wrapper.cap nav.left-nav,#masthead>.row-2>.wrapper.cap nav.right-nav{-webkit-box-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;display:block;max-width:45%}
 #masthead>.row-2>.wrapper.cap nav.left-nav>div ul,#masthead>.row-2>.wrapper.cap nav.right-nav>div ul{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-line-pack:center;align-content:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 #masthead>.row-2>.wrapper.cap nav.left-nav>div ul li a,#masthead>.row-2>.wrapper.cap nav.right-nav>div ul li a{font-size:14px}
+#masthead>.row-2>.wrapper.cap nav.left-nav>div ul li ul,#masthead>.row-2>.wrapper.cap nav.right-nav>div ul li ul{display:none}
 #masthead>.row-2>.wrapper.cap .logo{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2;margin:0;z-index:100;height:0;overflow:visible;max-width:200px;min-width:120px}
 #masthead>.row-2>.wrapper.cap .logo a{-webkit-transform:translateX(0) translateY(-50%);transform:translateX(0) translateY(-50%)}
 #colophon>.wrapper.cap{padding:40px 0}

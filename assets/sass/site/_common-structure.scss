@@ -219,6 +219,7 @@
 			}
 			nav.left-nav, nav.right-nav {
 				display: none;
+				z-index: 100000;
 				@media screen and (min-width: $tabwidth){
 					@include flexbox-flex(1,1,auto);
 					display: block;
@@ -244,6 +245,8 @@
 						}
 						li {
 							list-style-type: none;
+							width: auto;
+							position: relative;
 							@media screen and (min-width: $deskwidth){
 								margin: 0 10px;
 							}
@@ -263,6 +266,35 @@
 								}
 								@media screen and (min-width: $deskwidth){
 									font-size: 18px;
+								}
+							}
+							ul {
+								@media screen and (min-width: $tabwidth){
+									display: none;
+								}
+							}
+							&:hover {
+								ul {
+									display: block;
+									position: absolute; 
+									top: 100%;
+									left: 0;
+									width: 230px;
+									background-color: #673695;
+									li {
+										background-color: rgba(#fff, .2);
+										width: 100%;
+										text-align: left;
+										font-size: 12px;
+										a {
+											padding: 10px;
+											display: block;
+											font-size: 12px;
+										}
+										&:hover {
+											background-color: rgba(#fff, .35);
+										}
+									}
 								}
 							}
 						}
