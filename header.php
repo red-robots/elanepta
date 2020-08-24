@@ -30,16 +30,23 @@
 				<?php 
 				$facebook_link = get_field("facebook_link","option");
 				$twitter_link = get_field("twitter_link","option");
-				if($facebook_link):?>
-					<div class="social">
-						<a href="<?php echo $facebook_link;?>" target="_blank"><i class="fa fa-facebook"></i></a>
-					</div><!--.social-->
-				<?php endif;
+				$instagram_link = get_field("instagram_link","option");
+				
 				if($twitter_link):?>
 					<div class="social">
 						<a href="<?php echo $twitter_link;?>" target="_blank"><i class="fa fa-twitter"></i></a>
 					</div><!--.social-->
-				<?php endif;?>
+				<?php endif;
+				if($instagram_link):?>
+					<div class="social">
+						<a href="<?php echo $instagram_link;?>" target="_blank"><i class="fa fa-instagram"></i></a>
+					</div><!--.social-->
+				<?php endif;
+				if($facebook_link):?>
+					<div class="social">
+						<a href="<?php echo $facebook_link;?>" target="_blank"><i class="fa fa-facebook"></i></a>
+					</div><!--.social-->
+				<?php endif; ?>
 			</div><!--.wrapper-->
 		</div><!--.row-1-->
 		<div class="row-2">
