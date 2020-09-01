@@ -160,6 +160,13 @@
 					float: right;
 				}
 			}
+			&.social-container {
+				width: 100%;
+				text-align: center;
+				.social {
+					display: inline-block;
+				}
+			}
 		}
 	}
 	>.row-2 {
@@ -171,7 +178,7 @@
 			@include flexbox-align-content(center);
 			@include flexbox-justify(flex-start);
 			@include flexbox-direction(column);
-			@media screen and (min-width: $tabwidth){
+			@media screen and (min-width: $midwidth){
 				@include flexbox-justify(space-between);
 				@include flexbox-direction(row);
 				padding: 40px 0;
@@ -187,7 +194,7 @@
 				text-align: center;
 				display: inline-block;
 				margin: 0 0 20px 0;
-				@media screen and (min-width: $tabwidth){
+				@media screen and (min-width: $midwidth){
 					display: none;
 				}
 				&.active {
@@ -198,7 +205,7 @@
 			}
 			nav.left-nav {
 				order: 3;
-				@media screen and (min-width: $tabwidth){
+				@media screen and (min-width: $midwidth){
 					order: 1;
 					padding-right: 30px;
 				}
@@ -209,7 +216,7 @@
 			}
 			nav.right-nav {
 				order: 4;
-				@media screen and (min-width: $tabwidth){
+				@media screen and (min-width: $midwidth){
 					order: 3;
 					padding-left: 30px;
 				}
@@ -220,7 +227,7 @@
 			nav.left-nav, nav.right-nav {
 				display: none;
 				z-index: 100000;
-				@media screen and (min-width: $tabwidth){
+				@media screen and (min-width: $midwidth){
 					@include flexbox-flex(1,1,auto);
 					display: block;
 					max-width: 45%;
@@ -233,7 +240,7 @@
 						margin: 0;
 						padding: 0;
 						text-align: center;
-						@media screen and (min-width: $tabwidth){
+						@media screen and (min-width: $midwidth){
 							@include flexbox();
 							@include flexbox-align-items(center);
 							@include flexbox-align-content(center);
@@ -269,27 +276,54 @@
 								}
 							}
 							ul {
-								@media screen and (min-width: $tabwidth){
+								display: block;
+								position: relative;
+								padding: 20px;
+    							width: 100%;
+    							background-color: rgba(#fff,.1);
+    							li {
+    								font-size: 12px;
+    							}
+    							ul {
+    								display: block;
+									position: relative;
+									padding: 20px;
+	    							width: 100%;
+	    							background-color: rgba(#fff,.1);
+	    							@media screen and (min-width: $midwidth){
+	    								padding: 0;
+	    								background-color: rgba(#fff, 0);
+	    							}
+    							}
+								@media screen and (min-width: $midwidth){
 									display: none;
+									width: auto;
 								}
 							}
 							&:hover {
 								ul {
-									display: block;
-									position: absolute; 
-									top: 100%;
-									left: 0;
-									width: 230px;
-									background-color: #673695;
+									@media screen and (min-width: $midwidth){
+										display: block;
+										position: absolute; 
+										top: 100%;
+										left: 0;
+										width: 230px;
+										background-color: #673695;
+										padding: 0;
+									}
 									li {
-										background-color: rgba(#fff, .2);
-										width: 100%;
-										text-align: left;
-										font-size: 12px;
-										a {
-											padding: 10px;
-											display: block;
+										@media screen and (min-width: $midwidth){
+											background-color: rgba(#fff, .2);
+											width: 100%;
+											text-align: left;
 											font-size: 12px;
+										}
+										a {
+											@media screen and (min-width: $midwidth){
+												padding: 10px;
+												display: block;
+												font-size: 12px;
+											}
 										}
 										&:hover {
 											background-color: rgba(#fff, .35);
@@ -304,8 +338,11 @@
 			.logo {
 				order: 1;
 				margin: 0 auto;
-				width: 80%;
+				max-width: 180px;
 				@media screen and (min-width: $tabwidth){
+					// width: 80%;
+				}
+				@media screen and (min-width: $midwidth){
 					order: 2;
 					margin: 0;
 					z-index: 100;
@@ -317,7 +354,7 @@
 				a {
 					display: block;
 					@include translatexy(0,-50px);
-					@media screen and (min-width: $tabwidth){
+					@media screen and (min-width: $midwidth){
 						@include translatexy(0,-50%);
 					}
 					img {

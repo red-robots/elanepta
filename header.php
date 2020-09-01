@@ -26,7 +26,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="row-1">
-			<div class="wrapper cap clear-bottom">
+			<div class="wrapper cap clear-bottom social-container">
 				<?php 
 				$facebook_link = get_field("facebook_link","option");
 				$twitter_link = get_field("twitter_link","option");
