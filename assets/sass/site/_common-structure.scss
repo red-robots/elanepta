@@ -245,7 +245,8 @@
 							@include flexbox-align-items(center);
 							@include flexbox-align-content(center);
 							@include flexbox-justify(space-between);
-							@include flexbox-direction(column);
+							// @include flexbox-direction(column);
+							@include flexbox-direction(row);
 						}
 						@media screen and (min-width: $deskwidth){
 							@include flexbox-direction(row);
